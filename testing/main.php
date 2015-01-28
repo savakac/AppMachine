@@ -54,5 +54,4 @@ class RedAuto extends Auto {
 
 $MojeRedAuto = new RedAuto();
 $MojeRedAuto->setAge("20");
-$MojeRedAuto->speed();
 echo($MojeRedAuto->getAge());
