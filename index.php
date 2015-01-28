@@ -1,6 +1,5 @@
 <?php
 
-// Nadstavenie zlozky adresara a zlozky samotnej applikacie
 define("WWW_DIR", __DIR__);
 define("APP_DIR", WWW_DIR . '/app');
 
