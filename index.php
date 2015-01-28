@@ -1,18 +1,17 @@
 <?php
 
-class TestObject {
+// Nadstavenie zlozky adresara a zlozky samotnej applikacie
+define("WWW_DIR", __DIR__);
+define("APP_DIR", WWW_DIR . '/app');
 
-	private $stringValue;
+include(APP_DIR . '/libs...');
+include(APP_DIR . '/libs...');
 
-	public function __construct($stringValue) {
-		$this->stringValue = $stringValue;
-	}
+$settings = array(
+	'baseDir' => WWW_DIR,
+	'urlDir' => 'AppMachine',
+);
 
-	public function hello() {
-		echo( "Zdravim ta velky priatel " . $this->stringValue);
-	}
+$configurator = new \AppMachine\Configurator($settings);
 
-}
-
-$object = new TestObject("Jan");
-$object->hello();
+$configurator->runApplication();
