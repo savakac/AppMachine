@@ -16,7 +16,6 @@ class Configurator extends \AppMachine\Object {
 		$this->urlDir = $settings['urlDir'];
 		$this->registerAutoloader();
 		
-		echo("Loading application page");		
 		// Zapnutie error reportingu	
 		error_reporting(E_ALL | E_STRICT);		
 	}

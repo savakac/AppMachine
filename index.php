@@ -13,5 +13,6 @@ $settings = array(
 	'urlDir' => 'AppMachine',
 );
 
+// Spustenie aplikacie
 $configurator = new \AppMachine\Configurator($settings);
 $configurator->runApplication();
