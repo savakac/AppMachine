@@ -2,7 +2,7 @@
 
 namespace AppMachine;
 
-include(__DIR__ . 'Object.php');
+include(__DIR__ . '/Object.php');
 
 class Configurator extends \AppMachine\Object {
 	private $baseDir;
@@ -10,12 +10,13 @@ class Configurator extends \AppMachine\Object {
 	private $controllers = array();
 	private $includeDirs = array('libs', 'controllers');
 
-	public function __costruct($settings) {
+	public function __costruct(array $settings) {
 		session_start();
 		$this->baseDir = $settings['baseDir'];
 		$this->urlDir = $settings['urlDir'];
 		$this->registerAutoloader();
 		
+		echo("Loading application page");		
 		// Zapnutie error reportingu	
 		error_reporting(E_ALL | E_STRICT);		
 	}
@@ -41,7 +42,8 @@ class Configurator extends \AppMachine\Object {
 	public function runApplication() {
 		$request = new Http\HttpRequest($this);
 		$app = new Application($request, $this);
-
+		
+		echo "runApplication";
 		$app->generatePage();
 	}
 
