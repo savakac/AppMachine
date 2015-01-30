@@ -12,5 +12,5 @@ Options -Indexes
 	# Front controls
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond !\.(png|jpg) index.php [L]
+	RewriteRule !\.(png|jpg) index.php [L]
 </IfModule>

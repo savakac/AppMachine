@@ -1,0 +1,11 @@
+<section id="articles">
+	<article class="article">
+		<h3>Welcome to main page!</h3>
+		<div class="lead">
+			{test} This is main page AppMachine.
+		</div>
+		<div class="meta">
+			Testovacia stranka
+		</div>
+	</article>
+</section>

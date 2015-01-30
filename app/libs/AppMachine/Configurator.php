@@ -9,7 +9,6 @@ class Configurator extends \AppMachine\Object {
 	private $urlDir;
 	private $controllers = array();
 	private $includeDirs = array('libs', 'controllers');
-	private $test;
 
 	public function __construct(array $settings) {
 		session_start();
@@ -40,11 +39,10 @@ class Configurator extends \AppMachine\Object {
 	}
 
 	public function runApplication() {
-		// $request = new Http\HttpRequest($this);
-		// $app = new Application($request, $this);
+		$request = new Http\HttpRequest($this);
+		$app = new Application($request, $this);
 		
-		echo "runApplication" . $this->test;
-		// $app->generatePage();
+		$app->generatePage();
 	}
 
 	public function getBaseDir() {
@@ -60,7 +58,7 @@ class Configurator extends \AppMachine\Object {
 			$this->controllers[$name] = $controller;
 			$this->controllers[$name]->setConfigurator($this);
 		} else {
-			throw new \AppMachine\Exceptions\ControlerAlreadyExists;
+			throw new \AppMachine\Exceptions\ControllerAlreadyExists;
 		}
 	}
 
