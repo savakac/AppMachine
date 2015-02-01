@@ -1,0 +1,20 @@
+<section id="articles">
+	<article class="article">
+		<h3>Lorem ipsum</h3>
+		<div class="lead">
+			This is a begining text from this web.
+		</div>
+		<div class="meta">
+			Webpage testing page
+		</div>
+	</article>
+	<article class="article">
+		<h3>Lorem ipsum</h3>
+		<div class="lead">
+			This is begining text from webpage.
+		</div>
+		<div class="meta">
+			Webpage testing page
+		</div>
+	</article>
+</section>

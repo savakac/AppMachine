@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="{baseURL}/css/style.css">
+		<title>AppMachine - Main Page</title>
+	</head>
+	<body>
+		<div id="page">
+			<header id="header">
+				<h1>AppMachine</h1>
+				<nav>
+					<ul>
+						<li><a href="{baseURL}">Home</a></li>
+						<li><a href="{baseURL}">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<div id="content">
+				{include content}
+					<aside id="side">
+						<form action="#" method="get">
+							<fieldset>
+								<legend>Login</legend>
+								<div><label for="username">Username: </label><input type="text" id="username" name="username" /></div>
+								<div><label for="password">Password: </label><input type="password" id="password" name="password" /></div>
+								<input type="submit" name="submit" value="login">
+							</fieldset>
+						</form>
+					</aside>
+			</div>
+			<footer id="footer">
+				AppMachine is GPL
+			</footer>
+		</div>
+	</body>
+</html>
