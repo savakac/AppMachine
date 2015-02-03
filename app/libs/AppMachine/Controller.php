@@ -1,6 +1,8 @@
 <?php
 
-abstract class Controler extends Object {
+namespace AppMachine;
+
+abstract class Controller extends Object {
 
 	protected $template;
 	protected $config;

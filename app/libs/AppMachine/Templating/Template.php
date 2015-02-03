@@ -2,16 +2,16 @@
 
 namespace AppMachine\Templating;
 
-use AppMachine\Object,
-	AppMacnine\Exceptions\NoTemplateFileException;
+use \AppMachine\Object,
+	\AppMachine\Exceptions\NoTemplateFileException;
 
 abstract class Template extends Object {
 
-	protected $variable = array();
+	protected $variables = array();
 	protected $templateFile;
 	protected $config;
 
-	public function __construct($filename, AppMachine\Configurator $config) {
+	public function __construct($filename, \AppMachine\Configurator $config) {
 		if (is_file(APP_DIR . '/templates/' . $filename . '.template')) {
 			$this->templateFile = $filename;
 		} else {
@@ -25,15 +25,15 @@ abstract class Template extends Object {
 	}
 
 	public function addVariable($name, $value) {
-		$this->variable[$name] = $value;
+		$this->variables[$name] = $value;
 	}
 
 	public function getVariable($name) {
-		return $this->varibles[$name];
+		return $this->variables[$name];
 	}
 
-	public function getAllVaribles() {
-		return $this->varibles;
+	public function getAllVariables() {
+		return $this->variables;
 	}
 
 	abstract public function getTemplateData();
