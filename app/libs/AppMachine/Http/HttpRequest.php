@@ -25,7 +25,7 @@ class HttpRequest extends Object {
 		parse_str($_SERVER['QUERY_STRING'], $this->query);
 
 		$urlParts = explode($this->config->getUrlDir(), $this->getPath());
-		$urlParts = preg_replace('/^\//', '', $urlParts[1]);
+		$urlParts = preg_replace('/^\//', '', $urlParts[0]);
 		$this->pathInfo = explode('/', $urlParts);
 	}
 
